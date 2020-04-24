@@ -1,1 +1,69 @@
-<p>add-book works!</p>
+<div class="submit-form">
+  <div *ngIf="!saved">
+    <div class="form-group">
+      <label for="theme">Book theme:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="theme"
+        required
+        [(ngModel)]="book.theme"
+        name="theme"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="author">Author:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="author"
+        required
+        [(ngModel)]="book.author"
+        name="author"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="title">Book title:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        required
+        [(ngModel)]="book.title"
+        name="title"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="genre">Genre</label>
+      <input
+        class="form-control"
+        id="genre"
+        required
+        [(ngModel)]="book.genre"
+        name="genre"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="price"
+        required
+        [(ngModel)]="book.price"
+        name="price"
+      />
+    </div>
+
+    <button (click)="saveBook()" class="btn btn-success">Submit</button>
+  </div>
+
+  <div *ngIf="saved">
+    <h4>You saved the item successfully!</h4>
+    <button class="btn btn-success" (click)="newBook()">Add</button>
+  </div>
+</div>
