@@ -6,6 +6,7 @@ import { BookstoreService } from 'src/app/services/bookstore.service'
   templateUrl: './add-book.component.html',
   styleUrls: ['./add-book.component.css']
 })
+
 export class AddBookComponent implements OnInit {
   book = {
     theme:'',
@@ -20,8 +21,7 @@ export class AddBookComponent implements OnInit {
 
   constructor(private bookstoreService: BookstoreService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   saveBook(){
     const data = {

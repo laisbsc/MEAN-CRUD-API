@@ -16,9 +16,9 @@ module.exports = app => {
      /**
      * "/api/books/published"
      * GET: returns all published books
+     * API not implemented on this frontend
      */
     router.get("/published", bookstore.findAllPublished);
-
     
      /**
      * "/api/books/:id"
@@ -32,7 +32,6 @@ module.exports = app => {
 
     router.delete("/:id", bookstore.delete);
 
-    
      /**
      * "/api/books/:id"
      * DELETE: deletes all books in the list

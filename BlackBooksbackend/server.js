@@ -6,7 +6,7 @@ const http = require("http"); //HTTP server functionalities
 const app = express(); // setting the routing to be handled by Express
 let server = http.createServer(app); //This is where our server gets created
 
-//root path
+//browser root path
 let corsOptions = {
     origin: "http://localhost:4200" 
   };
@@ -34,7 +34,7 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// simple route
+// simple route {root} (/)
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to BlackBooks Bookstore application." });
 });
