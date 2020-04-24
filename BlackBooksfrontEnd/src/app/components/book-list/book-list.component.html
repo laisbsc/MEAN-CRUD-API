@@ -32,22 +32,33 @@
     </ul>
 
     <button class="m-3 btn btn-sm btn-danger" (click)="removeAllBooks()">
-      Remove All
+      Remove All - DangerZone
     </button>
   </div>
+
+
   <div class="col-md-6">
     <div *ngIf="currentBook">
-      <h4>Tutorial</h4>
+      <h5>Selected book:</h5>
+
+      <div>
+        <label><strong>Book theme:</strong></label> {{ currentBook.theme }}
+      </div>
+      <div>
+        <label><strong>Author:</strong></label> {{ currentBook.author }}
+      </div>
       <div>
         <label><strong>Title:</strong></label> {{ currentBook.title }}
       </div>
       <div>
-        <label><strong>Description:</strong></label>
-        {{ currentBook.description }}
+        <label><strong>Genre:</strong></label> {{ currentBook.genre }}
+      </div>
+      <div>
+        <label><strong>Price:</strong></label> {{ currentBook.price }}
       </div>
       <div>
         <label><strong>Status:</strong></label>
-        {{ currentBook.published ? "Published" : "Pending" }}
+        {{ currentBook.published ? "In Stock" : "Out-of-list" }}
       </div>
 
       <!-- When the edit button is clicked, the user will be directed to /books/:id -->
@@ -58,7 +69,7 @@
 
     <div *ngIf="!currentBook">
       <br />
-      <p>Please click on a Book item...</p>
+      <p>Click on a title to show its details.</p>
     </div>
   </div>
 </div>
