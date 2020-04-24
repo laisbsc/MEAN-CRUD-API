@@ -1,5 +1,6 @@
 /**
- * file that defines the schema for mongoose
+ * file that defines the schema the BSON file
+ * stored on mongoDB handled by mongoose
  */
 module.exports = mongoose => {
     const Bookstore = mongoose.model(
@@ -16,6 +17,5 @@ module.exports = mongoose => {
         { timestamps: true }
       )
     );
-  
     return Bookstore;
   };

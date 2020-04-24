@@ -34,7 +34,7 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// simple route
+// simple route {root} (/)
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to BlackBooks Bookstore application." });
 });

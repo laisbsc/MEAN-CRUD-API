@@ -4,25 +4,43 @@ module.exports = app => {
 
     let router = require("express").Router();
 
-    //create a new book
+/*  "/api/contacts"
+ *    GET: finds all contacts
+ *    POST: creates a new contact
+ */
+    
+    /**
+     * "/api/boks"
+     * POST: creates a new book item
+     * GET: returns all books items on the db
+     */
     router.post("/", bookstore.create);
 
-    //retrieve all in bookstore_list
     router.get("/", bookstore.findAll);
 
-    //retrieve all published books
+    /**
+     * "/api/books/published"
+     * GET: returns all published books
+     * API not implemented on this frontend
+     */
     router.get("/published", bookstore.findAllPublished);
 
-    //retrieve one book by id
+     /**
+     * "/api/books/:id"
+     * GET: retrieve one book by id
+     * PUT: update a book item by id
+     * DELETE: delete a book item by id
+     */
     router.get("/:id", bookstore.findOne);
 
-    //update a book item by id
     router.put("/:id", bookstore.update);
 
-    //delete book item by id
     router.delete("/:id", bookstore.delete);
 
-    //delete all books in the list
+    /**
+     * "/api/books"
+     * DELETE: deletes all published books
+     */
     router.delete("/", bookstore.deleteAll);
 
     app.use('/api/books', router);
