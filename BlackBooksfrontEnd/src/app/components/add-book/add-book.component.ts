@@ -15,6 +15,7 @@ export class AddBookComponent implements OnInit {
     price: '',
     published: false
   };
+
   saved = false;
 
   constructor(private bookstoreService: BookstoreService) { }
