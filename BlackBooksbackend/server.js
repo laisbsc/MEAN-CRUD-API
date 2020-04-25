@@ -27,6 +27,7 @@ db.mongoose
   });
 
 app.use(cors(corsOptions));
+app.use('*', express.static('./BlackBooksfrontEnd'))
 
 //parse requests of content type - app/JSON
 app.use(bodyParser.json());
