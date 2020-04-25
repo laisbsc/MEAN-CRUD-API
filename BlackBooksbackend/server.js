@@ -9,7 +9,7 @@ let server = http.createServer(app); //This is where our server gets created
 //browser root path
 let corsOptions = {
     // origin: "http://localhost:4200" 
-    origin: "https://evening-forest-63744.herokuapp.com/";
+    origin: "https://evening-forest-63744.herokuapp.com/"
   };
 
 //database connection > handled by mongoose
