@@ -1,3 +1,6 @@
+/**
+ * routes on a HTTP req. to the controller action
+ */
 module.exports = app => {
     
     const bookstore = require("../controllers/bookstore.controller");

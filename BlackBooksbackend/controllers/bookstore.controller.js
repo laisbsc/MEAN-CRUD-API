@@ -1,3 +1,6 @@
+/**
+ * ineracts with the model
+ */
 const db = require("../models");
 const Bookstore = db.bookstore;
 

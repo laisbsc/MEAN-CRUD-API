@@ -1,6 +1,7 @@
 /**
  * file that defines the schema for the
  * BSON object stored in MongoDB handled by mongoose
+ * Abstracts the database
  */
 module.exports = mongoose => {
     const Bookstore = mongoose.model(
